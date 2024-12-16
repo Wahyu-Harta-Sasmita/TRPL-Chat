@@ -1,50 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  #app {
-    width: 80%;
-    max-width: 500px;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  #message {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #aaa;
-  }
-  
+  background-color: black;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0c9e20;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+.header .app-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.chat-container {
+  padding: 15px;
+  height: 475px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  max-width: 60%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.chat.left {
+  background-color: black;
+  color: white;
+  align-self: flex-start;
+}
+
+.chat.right {
+  background-color: #0cb03b;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.footer button {
+  width: 40px;
+  height: 40px;
+  background-color: #05982f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer input {
+  flex: 1;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.footer button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

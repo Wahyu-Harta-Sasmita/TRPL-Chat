@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat App</title>
+  <title>TRPL Chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div id="app">
-    <h1>Peer-to-Peer Chat</h1>
-    <div id="chat-box"></div>
-    <input type="text" id="message" placeholder="Type your message here">
-    <button id="connect">Connect</button>
-    <button id="send" disabled>Send</button>
+  <div class="container">
+    <div class="header">
+      <div class="avatar"></div>
+      <span class="app-name">TRPL CHAT</span>
+    </div>
+
+    <div class="chat-container" id="chat-box">
+    </div>
+
+    <div class="footer">
+      <button id="connect-btn" class="icon-doc">+</button>
+      <input type="text" id="message-input" placeholder="type chat here" />
+      <button id="send-btn" class="icon-send" disabled>✈</button>
+    </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/simple-peer/simplepeer.min.js"></script>
   <script src="script.js"></script>
+
 </body>
+
 </html>
